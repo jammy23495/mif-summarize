@@ -16,7 +16,7 @@ CORS(app)
 def handle_post():
 	data = json.loads(request.data)
 	text = data["text"]
-	return summarizer(text, max_length=1000, min_length=30, do_sample=False)
+	return summarizer(text, max_length=1000, min_length=50, do_sample=False)
 
 if __name__ == '__main__':
 	app.run()
